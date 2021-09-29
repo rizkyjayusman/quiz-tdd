@@ -1,6 +1,6 @@
 # Introduction
 
-quiz-tdd is my self-study to learning how to achieve test-driven development annd also to refresh my Object-Oriented Design knowledge :P.
+quiz-tdd is my self-study to learning how to achieve test-driven development and also to refresh my Object-Oriented Design knowledge :stuck_out_tongue_closed_eyes: :stuck_out_tongue_closed_eyes:
 
 # Tech Stack
 
