@@ -85,10 +85,12 @@ public class QuizTest {
         quiz.addQuestion(questionTwo);
 
         Assertions.assertEquals("a", quiz.peek().getAnswer());
-        quiz.pop();
+        quiz.answerQuestion("a");
 
         Assertions.assertEquals("b", quiz.peek().getAnswer());
-        quiz.pop();
+        quiz.answerQuestion("b");
+
+        Assertions.assertEquals(2, quiz.getCorrectAnswer());
     }
 
     @Test
@@ -100,10 +102,12 @@ public class QuizTest {
         quiz.addQuestion(questionTwo);
 
         Assertions.assertNotEquals("b", quiz.peek().getAnswer());
-        quiz.pop();
+        quiz.answerQuestion("b");
 
         Assertions.assertEquals("b", quiz.peek().getAnswer());
-        quiz.pop();
+        quiz.answerQuestion("b");
+
+        Assertions.assertEquals(1, quiz.getCorrectAnswer());
     }
 
 }

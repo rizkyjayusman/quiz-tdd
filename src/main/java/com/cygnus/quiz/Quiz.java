@@ -6,6 +6,7 @@ public class Quiz {
     private Question[] questionList;
     private int top = -1;
     private int size;
+    private int correctAnswer = 0;
 
     public Quiz(int size) {
         this.size = size;
@@ -56,6 +57,22 @@ public class Quiz {
             questionList[top] = null;
             top--;
         }
+    }
+
+    public void setCorrectAnswer(int correctAnswer) {
+        this.correctAnswer = correctAnswer;
+    }
+
+    public int getCorrectAnswer() {
+        return this.correctAnswer;
+    }
+
+    public void answerQuestion(String answer) {
+        if(this.peek().getAnswer().equals(answer)) {
+            correctAnswer++;
+        }
+
+        pop();
     }
 
 }
