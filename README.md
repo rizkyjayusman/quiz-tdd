@@ -1,6 +1,8 @@
 # Introduction
 
-quiz-tdd is my self-study to learning how to achieve test-driven development and also to refresh my Object-Oriented Design knowledge :stuck_out_tongue_closed_eyes: :stuck_out_tongue_closed_eyes:
+quiz-tdd is my self-study project to learning how to achieve test-driven development and also to refresh my Object-Oriented Design knowledge :stuck_out_tongue_closed_eyes: :stuck_out_tongue_closed_eyes:
+
+Challenge Detail: [OOP Challenges - Quiz](https://github.com/StreetOfCode/OOP-Challenges/tree/QUIZ)
 
 # Tech Stack
 
