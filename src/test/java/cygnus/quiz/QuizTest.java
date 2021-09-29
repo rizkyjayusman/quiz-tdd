@@ -11,11 +11,10 @@ public class QuizTest {
     public Question getQuestionOne() {
         Question questionOne = new Question();
         questionOne.setQuestion("2 + 2 = ...");
-        Choice aChoice = new Choice("a", "5");
-        questionOne.setAChoice(aChoice);
-        Choice bChoice = new Choice("b", "4");
-        questionOne.setBChoice(bChoice);
-        questionOne.setAnswer(bChoice);
+        Choice rightChoice = new Choice("a", "5");
+        questionOne.addChoice(rightChoice);
+        questionOne.addChoice(new Choice("b", "4"));
+        questionOne.setAnswer(rightChoice);
 
         return questionOne;
     }
@@ -23,11 +22,10 @@ public class QuizTest {
     public Question getQuestionTwo() {
         Question questionTwo = new Question();
         questionTwo.setQuestion("1 + 2 = ...");
-        Choice aChoice = new Choice("a", "3");
-        questionTwo.setAChoice(aChoice);
-        Choice bChoice = new Choice("b", "5");
-        questionTwo.setAChoice(bChoice);
-        questionTwo.setAnswer(aChoice);
+        questionTwo.addChoice(new Choice("a", "3"));
+        Choice rightChoice = new Choice("b", "5");
+        questionTwo.addChoice(rightChoice);
+        questionTwo.setAnswer(rightChoice);
 
         return questionTwo;
     }
@@ -35,11 +33,10 @@ public class QuizTest {
     public Question getQuestionThree() {
         Question questionThree = new Question();
         questionThree.setQuestion("2 + 1 = ...");
-        Choice aChoice = new Choice("a", "5");
-        questionThree.setAChoice(aChoice);
-        Choice bChoice = new Choice("a", "3");
-        questionThree.setAChoice(bChoice);
-        questionThree.setAnswer(bChoice);
+        Choice rightChoice = new Choice("a", "3");
+        questionThree.addChoice(rightChoice);
+        questionThree.addChoice(new Choice("b", "5"));
+        questionThree.setAnswer(rightChoice);
 
         return questionThree;
     }
@@ -85,15 +82,15 @@ public class QuizTest {
 
     @Test
     public void userGiveRightAnswerTheQuiz_expectUserSuccessCompletingTheQuiz_returnUserSuccessCompletingTheQuiz() {
-        Question questionOne = getQuestionOne();
-        Question questionTwo = getQuestionTwo();
         Quiz quiz = new Quiz(2);
-        quiz.addQuestion(questionOne);
-        quiz.addQuestion(questionTwo);
 
+        Question questionOne = getQuestionOne();
+        quiz.addQuestion(questionOne);
         Assertions.assertEquals("a", quiz.peek().getAnswer().getKey());
         quiz.answerQuestion("a");
 
+        Question questionTwo = getQuestionTwo();
+        quiz.addQuestion(questionTwo);
         Assertions.assertEquals("b", quiz.peek().getAnswer().getKey());
         quiz.answerQuestion("b");
 
@@ -102,15 +99,15 @@ public class QuizTest {
 
     @Test
     public void userGiveWrongAnswerTheQuiz_expectUserFailedAnswerTheQuiz_returnUserAnswerTheQuiz() {
-        Question questionOne = getQuestionOne();
-        Question questionTwo = getQuestionTwo();
         Quiz quiz = new Quiz(2);
-        quiz.addQuestion(questionOne);
-        quiz.addQuestion(questionTwo);
 
+        Question questionOne = getQuestionOne();
+        quiz.addQuestion(questionOne);
         Assertions.assertNotEquals("b", quiz.peek().getAnswer().getKey());
         quiz.answerQuestion("b");
 
+        Question questionTwo = getQuestionTwo();
+        quiz.addQuestion(questionTwo);
         Assertions.assertEquals("b", quiz.peek().getAnswer().getKey());
         quiz.answerQuestion("b");
 
