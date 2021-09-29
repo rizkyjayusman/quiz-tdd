@@ -1,6 +1,5 @@
 package com.cygnus.quiz;
 
-
 public class Quiz {
 
     private Question[] questionList;
@@ -28,6 +27,15 @@ public class Quiz {
     public int getSize() {
         return this.size;
     }
+
+    public void setCorrectAnswer(int correctAnswer) {
+        this.correctAnswer = correctAnswer;
+    }
+
+    public int getCorrectAnswer() {
+        return this.correctAnswer;
+    }
+
 
     public void addQuestion(Question question) {
         if(! isFull()) {
@@ -57,14 +65,6 @@ public class Quiz {
             questionList[top] = null;
             top--;
         }
-    }
-
-    public void setCorrectAnswer(int correctAnswer) {
-        this.correctAnswer = correctAnswer;
-    }
-
-    public int getCorrectAnswer() {
-        return this.correctAnswer;
     }
 
     public void answerQuestion(String answer) {
