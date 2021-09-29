@@ -3,9 +3,9 @@ package com.cygnus.quiz;
 public class Question {
 
     private String question;
-    private String aChoice;
-    private String bChoice;
-    private String answer;
+    private Choice aChoice;
+    private Choice bChoice;
+    private Choice answer;
 
     public Question() { }
 
@@ -17,27 +17,27 @@ public class Question {
         return question;
     }
 
-    public void setAChoice(String aChoice) {
+    public void setAChoice(Choice aChoice) {
         this.aChoice = aChoice;
     }
 
-    public String getAChoice() {
+    public Choice getAChoice() {
         return this.aChoice;
     }
 
-    public void setBChoice(String bChoice) {
+    public void setBChoice(Choice bChoice) {
         this.bChoice = bChoice;
     }
 
-    public String getBChoice() {
+    public Choice getBChoice() {
         return this.bChoice;
     }
 
-    public void setAnswer(String answer) {
+    public void setAnswer(Choice answer) {
         this.answer = answer;
     }
 
-    public String getAnswer() {
+    public Choice getAnswer() {
         return this.answer;
     }
 }

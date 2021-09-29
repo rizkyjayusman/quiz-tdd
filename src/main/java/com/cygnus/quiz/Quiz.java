@@ -68,7 +68,7 @@ public class Quiz {
     }
 
     public void answerQuestion(String answer) {
-        if(this.peek().getAnswer().equals(answer)) {
+        if(this.peek().getAnswer().getKey().equals(answer)) {
             correctAnswer++;
         }
 

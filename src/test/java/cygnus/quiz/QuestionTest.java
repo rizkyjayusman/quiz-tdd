@@ -1,6 +1,7 @@
 package cygnus.quiz;
 
 
+import com.cygnus.quiz.Choice;
 import com.cygnus.quiz.Question;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -10,19 +11,19 @@ public class QuestionTest {
     @Test
     public void createNormalQuestion_expectSuccessCreated_returnSuccessCreated() {
         String quizQuestion = "2 + 2 = ...";
-        String aChoice = "a. 5";
-        String bChoice = "b. 4";
-        String answer = "b";
+        Choice aChoice = new Choice("a", "5");
+        Choice bChoice = new Choice("b", "4");
+
         Question question = new Question();
         question.setQuestion(quizQuestion);
         question.setAChoice(aChoice);
         question.setBChoice(bChoice);
-        question.setAnswer(answer);
+        question.setAnswer(bChoice);
 
         Assertions.assertEquals(quizQuestion, question.getQuestion());
         Assertions.assertEquals(aChoice, question.getAChoice());
         Assertions.assertEquals(bChoice, question.getBChoice());
-        Assertions.assertEquals(answer, question.getAnswer());
+        Assertions.assertEquals("b", question.getAnswer().getKey());
     }
 
     @Test
