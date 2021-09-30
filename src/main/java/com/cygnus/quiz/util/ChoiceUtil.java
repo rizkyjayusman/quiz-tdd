@@ -1,6 +1,6 @@
 package com.cygnus.quiz.util;
 
-import com.cygnus.quiz.Choice;
+import com.cygnus.quiz.entity.Choice;
 
 public class ChoiceUtil {
 

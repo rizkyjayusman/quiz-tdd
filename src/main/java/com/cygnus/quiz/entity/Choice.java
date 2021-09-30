@@ -1,4 +1,4 @@
-package com.cygnus.quiz;
+package com.cygnus.quiz.entity;
 
 import com.cygnus.quiz.util.ChoiceUtil;
 

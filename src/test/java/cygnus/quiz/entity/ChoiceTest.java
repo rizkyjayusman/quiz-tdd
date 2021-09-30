@@ -1,6 +1,6 @@
-package cygnus.quiz;
+package cygnus.quiz.entity;
 
-import com.cygnus.quiz.Choice;
+import com.cygnus.quiz.entity.Choice;
 import com.cygnus.quiz.util.ChoiceUtil;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

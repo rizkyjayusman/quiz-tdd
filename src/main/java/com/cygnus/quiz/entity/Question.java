@@ -1,4 +1,4 @@
-package com.cygnus.quiz;
+package com.cygnus.quiz.entity;
 
 import java.util.ArrayList;
 import java.util.List;

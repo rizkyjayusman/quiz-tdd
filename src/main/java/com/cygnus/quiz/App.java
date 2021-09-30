@@ -1,5 +1,9 @@
 package com.cygnus.quiz;
 
+import com.cygnus.quiz.entity.Choice;
+import com.cygnus.quiz.entity.Question;
+import com.cygnus.quiz.entity.Quiz;
+
 import java.util.Scanner;
 
 public class App {
